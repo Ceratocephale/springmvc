@@ -5,6 +5,7 @@ import be.technifutur.java.demospringmvc.repository.AbstractCrudRepository;
 import be.technifutur.java.demospringmvc.repository.ReservationRepository;
 import be.technifutur.java.demospringmvc.utils.EMFSharer;
 
+import java.time.Month;
 import java.util.Set;
 
 public class ReservationRepositoryImpl
@@ -16,11 +17,11 @@ public class ReservationRepositoryImpl
 
     @Override
     public void adaptId(Long id, Reservation entity) {
-
+        entity.setId(id);
     }
 
     @Override
-    public Set<Reservation> getFromMonth() {
+    public Set<Reservation> getFromMonth(Month month) {
         return null;
     }
 }
