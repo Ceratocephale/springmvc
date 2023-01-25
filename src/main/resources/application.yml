@@ -1,0 +1,5 @@
+spring:
+   banner:
+     image:
+server:
+  localhost: 8080

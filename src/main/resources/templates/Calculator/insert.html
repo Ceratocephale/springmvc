@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Calculator</h1>
+<div>Veillez mettre deux nombres et l'operation (+,-,/,*,%)</div>
+<form th:action="@{/Calculator/insert}" method="post" th:object="${result}">
+    <div></div>
+    <input id="one" th:field="*{one}">
+    </div>
+    <div>
+    <input id="operand" th:field="*{operand}">
+    </div>
+    <div>
+    <input id="two" th:field="*{two}">
+    </div>
+    <button type="submit">Envoyer</button>
+</form>
+
+</body>
+</html>

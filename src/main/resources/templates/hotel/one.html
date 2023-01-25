@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<h1>Details d'un hotel</h1>
+<ul th:object="${hotel}">
+    <li th:text="*{id}">donnees de l'hotel</li>
+    <li th:text="*{address}">Address:</li>
+    <li th:text="*{starNumber}">Nombre d'etoiles:</li>
+    <li th:text="*{receptionName}">Nom du receptionniste</li>
+    <li th:text="*{roomNum}">Nombre de chambres</li>
+    <a th:href="@{/room/{num}(num=*{numRoom})}">
+        <button>details</button>
+    </a>
+
+
+    <!--            La taille s'écrit en rougle si la taille > 20 (class="red")-->
+</ul>
+
+</body>
+</htm>

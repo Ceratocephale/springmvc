@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form th:action="@{/hotel/new}" method="post" th:object ="${hotel}">
+        <div>
+            <label for ="">ID:</label><br/>
+            <input type="number" class="form-control" id="id-num" th:field="*{id}">
+            <span th:if ="${#fields.hasErrors('id')}" th:errors="*{id}"></span>
+        </div>
+
+        <div>
+            <label for ="">Name:</label><br/>
+            <input type="text" id="hotel-name" th:field="*{name}">
+        </div>
+
+        <div>
+            <label for ="">Address: </label><br/>
+            <input type="text" id="hotel-address" th:field="*{address}">
+        </div>
+
+        <div>
+            <label for ="">Nombre d'etoiles: </label><br/>
+            <input type="text" id="hotel-stars" th:field="*{starNumber}">
+        </div>
+
+        <div>
+            <label for ="">Nom du receptionniste: </label><br/>
+            <input type="text" id="hotel-reception" th:field="*{receptionName}">
+        </div>
+
+        <button type="submit">Envoyer</button>
+
+    </form>
+
+</body>
+</html>

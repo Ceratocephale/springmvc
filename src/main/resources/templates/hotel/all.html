@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>
+    Hotels
+</h1>
+
+
+<ul>
+    <li th:each="hotel: ${hotels}" th:object="${hotel}">
+        <p th:text="|ID : *{id},
+                         Nom: *{name},
+                         nombre d''etoiles: *{starNumber},
+                         Nom du receptionniste: *{receptionName},
+                         Adresse: *{address}|">
+            donnees de l'hotel </p>
+        <a th:href="@{/hotel/{num}(num=*{id})}">
+            <button>details</button>
+        </a>
+    </li>
+</ul>
+</body>
+</html>
