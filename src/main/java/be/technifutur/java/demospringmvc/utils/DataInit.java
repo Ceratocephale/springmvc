@@ -38,7 +38,7 @@ public class DataInit implements InitializingBean {
 
 
         Hotel hotel = new Hotel();
-      //  hotel.setId(1l);
+        hotel.setId(1l);
         hotel.setName("Hilton");
         hotel.setAddress("Liege");
         hotel.setReceptionist(employee);
