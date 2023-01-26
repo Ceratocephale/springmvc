@@ -33,10 +33,10 @@ public class Reservation {
     private boolean breakfastIncluded;
 
     @Column(name = "date_begin",nullable = false)
-    private LocalDate dateBegin;
+    private LocalDateTime dateBegin;
 
     @Column(name = "date_end",nullable = false)
-    private LocalDate dateEnd;
+    private LocalDateTime dateEnd;
 
     @ManyToOne
     @JoinColumn(name = "room_id")
